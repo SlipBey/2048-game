@@ -1,45 +1,27 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="HandheldFriendly" content="true" />
-        <meta name="robots" content="INDEX, FOLLOW" />
-        <meta name="copyright" content=" .xyz" />
-        <meta name="theme-color" content="#0c4c61" />
-        <meta
-          name="author"
-          content="slip. .xyz"
-        />
-        <meta
-          name="description"
-          content=" 2048 Oyunu (2048 Game)"
-        />
-        <meta property="og:description" content="2048 Oyunu (2048 Game)" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="INDEX, FOLLOW" />
+  <meta name="copyright" content="slipyme.com" />
+  <meta name="theme-color" content="#0c4c61" />
+  <meta name="author" content="slip.slipyme.com" />
+  <meta name="description" content=" 2048 Oyunu (2048 Game)" />
+  <meta property="og:description" content="2048 Oyunu (2048 Game)" />
   <meta property="og:image" content="./assets/favicon.ico" />
-        <meta name="og:title" content=" " />
-        <meta
-          name="og:site_name"
-          content=" "
-          title="title"
-        />
-        <meta
-          name="og:url"
-          content="https://www. .xyz/"
-        />
-        <meta
-          name="keywords"
-          content="slip, slipbey, slik, sliki, personal, web, developer"
-        />
-        <link
-          rel="canonical"
-          href="https://www. .xyz/"
-        />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;500;600;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet"
-        />	  <link rel="icon" href="./assets/favicon.ico" />
-  <title>2048 Oyunu -  </title>
+  <meta name="og:title" content=" " />
+  <meta name="og:site_name" content=" " title="title" />
+  <meta name="og:url" content="https://www.slipyme.com" />
+  <meta name="keywords" content="slip, slipbey, slik, sliki, personal, web, developer" />
+  <link rel="canonical" href="https://www.slipyme.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;500;600;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./assets/favicon.ico" />
+  <title>2048 Oyunu - SlipBey</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./scripts/vue.js"></script>
   <script src="./scripts/tweenlite.min.js"></script>
@@ -64,10 +46,11 @@
             <div class="label">Toplam</div>
             <div>{{bestScore[size]}}</div>
           </div>&nbsp;&nbsp;
-          
-            <button v-if="!gameStarted" @click="startGame()" class="button" :style="buttonStyle" key="start">Başlat</button>
-            <button v-else @click="gameStarted=false" class="button" :style="buttonStyle" key="end">Bitir</button>
-         
+
+          <button v-if="!gameStarted" @click="startGame()" class="button" :style="buttonStyle"
+            key="start">Başlat</button>
+          <button v-else @click="gameStarted=false" class="button" :style="buttonStyle" key="end">Bitir</button>
+
         </div>
       </div>
       <div class="game-controls">
@@ -87,11 +70,14 @@
             <button v-if="!gameStarted" @click="startGame()" class="overButton" key="start">Yeniden Oyna</button>
           </div>
         </div>
-        <game-2048 ref="game" :size="size" :size-aim-map="sizeAimMap" :listen-own-key-events-only="false" :tab-index="1" :board-size-px="boardSizePx"
-          :started="gameStarted" @started="onGameStarted" @ended="onGameEnded" @score="onGameScore" @aim-changed="onGameAimChanged"
-          @aim-reached="onGameAimReached"></game-2048>
+        <game-2048 ref="game" :size="size" :size-aim-map="sizeAimMap" :listen-own-key-events-only="false" :tab-index="1"
+          :board-size-px="boardSizePx" :started="gameStarted" @started="onGameStarted" @ended="onGameEnded"
+          @score="onGameScore" @aim-changed="onGameAimChanged" @aim-reached="onGameAimReached"></game-2048>
       </div>
 
+      <div style="margin-top: 20px; font-size: 15px; font-weight: 700; text-align: center;">Copyright &copy; 2021 All
+        rights reserved. <br> Made width 💖 by <a href="https://slip.slipyme.com" target="_blank"
+          style="color: rgb(44, 119, 218); text-decoration-line: none;">SlipBey</a>.</div>
     </div>
   </div>
 
@@ -104,16 +90,19 @@
   <template id="game2048" hidden>
     <div class="board" :tabindex="tabIndex" :style="boardStyle">
       <div ref="cells" v-for="(cl, index) in cells" class="cell" :key="cl" :style="cellStyle">
-        <game2048-chip ref="chips" v-for="(ch, i) in cl.chips" :key="ch" :animation-time-ms="animationTimeMs" :chip="ch" :size-px="cellSizePx"></game2048-chip>
+        <game2048-chip ref="chips" v-for="(ch, i) in cl.chips" :key="ch" :animation-time-ms="animationTimeMs" :chip="ch"
+          :size-px="cellSizePx"></game2048-chip>
       </div>
     </div>
   </template>
 
   <template id="game2048-award" hidden>
-    <div class="award" :style="style" v-bind:class="{'award-obtained':award.obtained, 'award-not-obtained':!award.obtained}">
+    <div class="award" :style="style"
+      v-bind:class="{'award-obtained':award.obtained, 'award-not-obtained':!award.obtained}">
       <svg class="like" viewBox="0 0 456.814 456.814" :style="likeStyle">
         <g>
-          <path d="M441.11,252.677c10.468-11.99,15.704-26.169,15.704-42.54c0-14.846-5.432-27.692-16.259-38.547
+          <path
+            d="M441.11,252.677c10.468-11.99,15.704-26.169,15.704-42.54c0-14.846-5.432-27.692-16.259-38.547
 			c-10.849-10.854-23.695-16.278-38.541-16.278h-79.082c0.76-2.664,1.522-4.948,2.282-6.851c0.753-1.903,1.811-3.999,3.138-6.283
 			c1.328-2.285,2.283-3.999,2.852-5.139c3.425-6.468,6.047-11.801,7.857-15.985c1.807-4.192,3.606-9.9,5.42-17.133
 			c1.811-7.229,2.711-14.465,2.711-21.698c0-4.566-0.055-8.281-0.145-11.134c-0.089-2.855-0.574-7.139-1.423-12.85
@@ -126,8 +115,7 @@
 			c3.615,3.525,7.898,5.38,12.847,5.571c6.661,0.191,21.698,4.374,45.111,12.566c14.654,4.941,26.12,8.706,34.4,11.272
 			c8.278,2.566,19.849,5.328,34.684,8.282c14.849,2.949,28.551,4.428,41.11,4.428h4.855h21.7h10.276
 			c25.321-0.38,44.061-7.806,56.247-22.268c11.036-13.135,15.697-30.361,13.99-51.679c7.422-7.042,12.565-15.984,15.416-26.836
-			c3.231-11.604,3.231-22.74,0-33.397c8.754-11.611,12.847-24.649,12.272-39.115C445.395,268.286,443.971,261.055,441.11,252.677z"
-          />
+			c3.231-11.604,3.231-22.74,0-33.397c8.754-11.611,12.847-24.649,12.272-39.115C445.395,268.286,443.971,261.055,441.11,252.677z" />
 
           <path d="M100.5,191.864H18.276c-4.952,0-9.235,1.809-12.851,5.426C1.809,200.905,0,205.188,0,210.137v182.732
 			c0,4.942,1.809,9.227,5.426,12.847c3.619,3.611,7.902,5.421,12.851,5.421H100.5c4.948,0,9.229-1.81,12.847-5.421
@@ -744,4 +732,5 @@
     }
   })
 </script>
+
 </html>
