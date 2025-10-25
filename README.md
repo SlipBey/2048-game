@@ -107,7 +107,7 @@ Contributions are welcome! 🎉
 ## 📸 Preview
 
 <p align="center">
-  <img src="https://github.com/slipbey/2048-game/public/screenshot.png" width="500" alt="2048 Game Screenshot">
+  <img src="https://raw.githubusercontent.com/SlipBey/2048-game/refs/heads/main/public/screenshot.png" width="500" alt="2048 Game Screenshot">
 </p>
 
 ---
