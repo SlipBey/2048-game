@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+html,
+body {
+  @apply bg-gray-900 text-white text-[18px];
+}
+
+button,
+input {
+  @apply duration-200 hover:cursor-pointer;
+}
+
+.half-white {
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.appearing {
+  animation: appearing 1s;
+}
+.appearing07 {
+  animation: appearing07 1s;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appearing07 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.board {
+  @apply relative flex flex-wrap content-start bg-gray-800 outline-none;
+}
+.cell {
+  @apply bg-slate-700 relative rounded-md;
+}
+.chip {
+  @apply absolute flex items-center justify-center font-bold z-[1] rounded-md;
+}
+
+@keyframes up-disappear {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes chip-value-changed {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes chip-appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
